@@ -1,0 +1,200 @@
+# -*- coding: utf-8 -*-
+topleft = "[]"
+topmiddle = "[]"
+topright = "[]"
+middleleft = "[]"
+middlemiddle = "[]"
+middleright = "[]"
+bottomleft = "[]"
+bottommiddle = "[]"
+bottomright = "[]"
+#the show function shows the current gamestate
+def show():
+    print topleft, topmiddle, topright
+    print middleleft, middlemiddle, middleright
+    print bottomleft, bottommiddle, bottomright
+#Scripts for changing state of [] brackets to [x] or [o]
+def move_topleft(arg):
+    global topleft
+    if arg == "x":
+        topleft = "[x]"
+    elif arg == "o":
+        topleft = "[o]"
+    else:
+        print (arg),"is not valid, please use x or o"
+    print "showing current game state:"
+    return show(), winning_condition()
+def move_topmiddle(arg):
+    global topmiddle
+    if arg == "x":
+        topmiddle = "[x]"
+    elif arg == "o":
+        topmiddle = "[o]"
+    else:
+        print (arg),"is not valid, please use x or o"
+    print "showing current game state:"
+    return show(), winning_condition()
+def move_topright(arg):
+    global topright
+    if arg == "x":
+        topright = "[x]"
+    elif arg == "o":
+        topright = "[o]"
+    else:
+        print (arg),"is not valid, please use x or o"
+    print "showing current game state:"
+    return show(), winning_condition()
+def move_middleleft(arg):
+    global middleleft
+    if arg == "x":
+        middleleft = "[x]"
+    elif arg == "o":
+        middleleft = "[o]"
+    else:
+        print (arg),"is not valid, please use x or o"
+    print "showing current game state:"
+    return show(), winning_condition()
+def move_middlemiddle(arg):
+    global middlemiddle
+    if arg == "x":
+        middlemiddle = "[x]"
+    elif arg == "o":
+        middlemiddle = "[o]"
+    else:
+        print (arg),"is not valid, please use x or o"
+    print "showing current game state:"
+    return show(), winning_condition()
+def move_middleright(arg):
+    global middleright
+    if arg == "x":
+        middleright = "[x]"
+    elif arg == "o":
+        middleright = "[o]"
+    else:
+        print (arg),"is not valid, please use x or o"
+    print "showing current game state:"
+    return show(), winning_condition()
+def move_bottomleft(arg):
+    global bottomleft
+    if arg == "x":
+        bottomleft = "[x]"
+    elif arg == "o":
+        bottomleft = "[o]"
+    else:
+        print (arg),"is not valid, please use x or o"
+    print "showing current game state:"
+    return show(), winning_condition()
+def move_bottommiddle(arg):
+    global bottommiddle
+    if arg == "x":
+        bottommiddle = "[x]"
+    elif arg == "o":
+        bottommiddle = "[o]"
+    else:
+        print (arg),"is not valid, please use x or o"
+    print "showing current game state:"
+    return show(), winning_condition()
+def move_bottomright(arg):
+    global bottomright
+    if arg == "x":
+        bottomright = "[x]"
+    elif arg == "o":
+        bottomright = "[o]"
+    else:
+        print (arg),"is not valid, please use x or o"
+    print "showing current game state:"
+    return show(), winning_condition()
+#The winning conditions
+def winning_condition():
+    #horizontal victories for o
+    if topleft == "[o]" and topmiddle == "[o]" and topright == "[o]":
+        print "o, You win from x"
+    else:
+        pass
+
+    if middleleft == "[o]" and middlemiddle == "[o]" and middleright == "[o]":
+        print "o, You win from x"
+    else:
+        pass
+
+    if bottomleft == "[o]" and bottommiddle == "[o]" and bottomright == "[o]":
+        print "o, You win from x"
+    else:
+        pass
+
+    #Horizont victories for x
+    if topleft == "[x]" and topmiddle == "[x]" and topright == "[x]":
+        print "x, You win from o"
+    else:
+        pass
+
+    if middleleft == "[x]"  and middlemiddle == "[x]"  and middleright == "[x]":
+        print "x, You win from o"
+    else:
+        pass
+
+    if bottomleft == "[x]" and bottommiddle == "[x]"  and bottomright == "[x]" :
+        print "x, You win from o"
+    else:
+        pass
+    #Vertical win conditions
+    if topleft == "[o]" and middleleft == "[o]" and bottomleft == "[o]":
+        print "o, You win from x"
+    else:
+        pass
+
+    if topmiddle == "[o]" and middlemiddle == "[o]" and bottommiddle == "[o]":
+        print "o, You win from x"
+    else:
+        pass
+
+    if topright == "[o]" and middleright == "[o]" and bottomright == "[o]":
+        print "o, You win from x"
+    else:
+        pass
+
+    if topleft == "[x]" and middleleft == "[x]" and bottomleft == "[x]":
+        print "x, You win from o"
+    else:
+        pass
+
+    if topmiddle == "[x]" and middlemiddle == "[x]" and bottommiddle == "[x]":
+        print "x, You win from o"
+    else:
+        pass
+
+    if topright == "[x]" and middleright == "[x]" and bottomright == "[x]":
+        print "x, You win from o"
+    else:
+        pass
+    #sideways victories
+    if topleft == "[x]" and middlemiddle == "[x]" and bottomright == "[x]":
+        print "x, You win from o"
+    else:
+        pass
+
+    if topright == "[x]" and middlemiddle == "[x]" and bottomleft == "[x]":
+        print "x, You win from o"
+    else:
+        pass
+
+    if topleft == "[o]" and middlemiddle == "[o]" and bottomright == "[o]":
+        print "o, You win from o"
+    else:
+        pass
+
+    if topright == "[o]" and middlemiddle == "[o]" and bottomleft == "[o]":
+        print "o, You win from x"
+    else:
+        pass
+
+#the game! write move_topleft (or another spot you want to amke your move)
+#and then use (x) or (o) depending on which player you are.
+show()
+move_topmiddle("x")
+move_middleleft("o")
+move_topleft("x")
+move_topright("o")
+move_bottomright("x")
+move_middlemiddle("o")
+move_middleright("o")
